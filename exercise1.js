@@ -39,13 +39,4 @@ const movies = require('./movies.json');
 // 12. Find the directors of the 10 best movies.
 //     Have any of these directors made movies that score lower than 6.0
 
-console.log(
-  movies
-    .sort((a, b) => b.IMDB_Rating - a.IMDB_Rating)
-    .filter(m => !!m.Director)
-    .slice(0, 10)
-    .map(m => m.Director)
-    .find(d => movies.filter(m => !!m.IMDB_Rating && m.IMDB_Rating < 5 && m.Director === d).length)
-);
-
 // 13. Find the top 5 directors by their movies' average rating
