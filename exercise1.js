@@ -1,5 +1,6 @@
 // imports a database with movies
-const movies = require('./movies.json');
+const fs = require('fs');
+const movies = JSON.parse(fs.readFileSync('./movies.json', 'utf8'));
 
 // npm install -g nodemon
 // nodemon exercise1.js
